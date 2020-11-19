@@ -82,8 +82,6 @@ Spellbook.m
 *.bcsymbolmap
 Carthage
 
-# Sberthage
-## Файлы менеджера зависимостей Сбера
 
 
 # fastlane
@@ -121,6 +119,3 @@ node_modules
 .npm
 npm-debug.log
 
-# Sberthage
-## Файлы менеджера зависимостей Сбера
-Sberthage
