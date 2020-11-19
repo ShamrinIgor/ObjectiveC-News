@@ -9,4 +9,10 @@
 
 @implementation NetworkService
 
+typedef void(^postRequestBlock)(BOOL status);
+
+- (void) getNews: completion: (postRequestBlock) completion {
+	
+}
+
 @end
