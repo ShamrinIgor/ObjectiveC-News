@@ -11,9 +11,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol NetworkServiceProtocol
 
+typedef void(^postRequestBlock)(NSArray *articles);
+
+- (void)getNewsWithCompletion: (postRequestBlock) completion;
+
 @end
 
 @interface NetworkService : NSObject<NetworkServiceProtocol>
+
+- (void)getNewsWithCompletion: (postRequestBlock) completion;
+
++ (id) sharedService; 
 
 @end
 

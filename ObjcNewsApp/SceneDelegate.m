@@ -21,6 +21,7 @@
 	self.window.windowScene = scene;
 	self.window.makeKeyAndVisible;
 	self.window.rootViewController = [LoginViewController new];
+	LoginViewController *vc = [[LoginViewController new] init];
 }
 
 

@@ -7,9 +7,13 @@
 
 #import "LoginViewController.h"
 #import "InputView.h"
+#import "NetworkService.h"
+#import "FeedViewController.h"
+#import "UIColor+hex.h"
 
 @interface LoginViewController ()
 
+//@property (strong, nonatomic) id<NetworkServiceProtocol> networkService;
 @end
 
 @implementation LoginViewController
@@ -19,7 +23,7 @@ UIButton *loginButton;
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	self.view.backgroundColor = UIColor.grayColor;
+	self.view.backgroundColor = [UIColor colorFromHexString: @"#900C3F"];
 	inputView = [[InputView alloc] initWithFrame: CGRectZero];
 	inputView.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -28,7 +32,10 @@ UIButton *loginButton;
 	[loginButton setTitleColor: UIColor.whiteColor forState: UIControlStateNormal];
 	loginButton.layer.cornerRadius = 10.0;
 	[loginButton setTitle: @"Войти" forState: UIControlStateNormal];
+	loginButton.backgroundColor = [UIColor colorFromHexString: @"#A1887F"];
 	loginButton.translatesAutoresizingMaskIntoConstraints = NO;
+	[loginButton addTarget: self action: @selector(loginButtonPressed:) forControlEvents: UIControlEventTouchUpInside];
+
 	[self setupUI];
 }
 
@@ -48,4 +55,12 @@ UIButton *loginButton;
 		[loginButton.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor]
 	]];
 }
+
+//MARK: Handlers
+- (void)loginButtonPressed: obj {
+	FeedViewController *loginVC = [FeedViewController new];
+	loginVC.modalPresentationStyle = UIModalPresentationFullScreen;
+	[self presentViewController: loginVC animated: YES completion: ^{}];
+}
+
 @end

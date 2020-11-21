@@ -5,11 +5,11 @@
 //  Created by Игорь Шамрин on 19.11.2020.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FeedViewController : NSObject
+@interface FeedViewController: UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @end
 

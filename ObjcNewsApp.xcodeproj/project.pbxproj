@@ -16,6 +16,9 @@
 		7828029A2566DCBC00462D34 /* InputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 782802992566DCBC00462D34 /* InputView.m */; };
 		7828029F2567036200462D34 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7828029E2567036200462D34 /* FeedViewController.m */; };
 		782802A525670D4A00462D34 /* NetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 782802A425670D4A00462D34 /* NetworkService.m */; };
+		782802B325680DCD00462D34 /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 782802B225680DCD00462D34 /* ArticleModel.m */; };
+		782802B825684D5800462D34 /* UIColor+hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 782802B725684D5800462D34 /* UIColor+hex.m */; };
+		782802BC25685A8200462D34 /* FeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 782802BB25685A8200462D34 /* FeedTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,12 @@
 		7828029E2567036200462D34 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		782802A325670D4A00462D34 /* NetworkService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkService.h; sourceTree = "<group>"; };
 		782802A425670D4A00462D34 /* NetworkService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkService.m; sourceTree = "<group>"; };
+		782802A825680B5400462D34 /* ArticleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
+		782802B225680DCD00462D34 /* ArticleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
+		782802B625684D5800462D34 /* UIColor+hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+hex.h"; sourceTree = "<group>"; };
+		782802B725684D5800462D34 /* UIColor+hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+hex.m"; sourceTree = "<group>"; };
+		782802BA25685A8200462D34 /* FeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedTableViewCell.h; sourceTree = "<group>"; };
+		782802BB25685A8200462D34 /* FeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,8 @@
 				782802A22567036B00462D34 /* NetworkService */,
 				782802852566D4B000462D34 /* Assets.xcassets */,
 				782802872566D4B000462D34 /* LaunchScreen.storyboard */,
+				782802B625684D5800462D34 /* UIColor+hex.h */,
+				782802B725684D5800462D34 /* UIColor+hex.m */,
 				7828028A2566D4B000462D34 /* Info.plist */,
 				7828028B2566D4B000462D34 /* main.m */,
 			);
@@ -99,6 +110,10 @@
 			children = (
 				7828029D2567036200462D34 /* FeedViewController.h */,
 				7828029E2567036200462D34 /* FeedViewController.m */,
+				782802A825680B5400462D34 /* ArticleModel.h */,
+				782802B225680DCD00462D34 /* ArticleModel.m */,
+				782802BA25685A8200462D34 /* FeedTableViewCell.h */,
+				782802BB25685A8200462D34 /* FeedTableViewCell.m */,
 			);
 			path = FeedScreen;
 			sourceTree = "<group>";
@@ -181,11 +196,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				782802812566D4AF00462D34 /* LoginViewController.m in Sources */,
+				782802B825684D5800462D34 /* UIColor+hex.m in Sources */,
 				7828027B2566D4AF00462D34 /* AppDelegate.m in Sources */,
 				7828029A2566DCBC00462D34 /* InputView.m in Sources */,
 				7828028C2566D4B000462D34 /* main.m in Sources */,
+				782802BC25685A8200462D34 /* FeedTableViewCell.m in Sources */,
 				7828029F2567036200462D34 /* FeedViewController.m in Sources */,
 				782802A525670D4A00462D34 /* NetworkService.m in Sources */,
+				782802B325680DCD00462D34 /* ArticleModel.m in Sources */,
 				7828027E2566D4AF00462D34 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
