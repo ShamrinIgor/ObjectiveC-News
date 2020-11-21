@@ -24,6 +24,13 @@ UIButton *loginButton;
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor colorFromHexString: @"#900C3F"];
+
+	CAGradientLayer *gradient = [CAGradientLayer layer];
+
+	gradient.frame = self.view.bounds;
+	gradient.colors = @[(id)[UIColor colorFromHexString: @"#A569BD"].CGColor, (id)[UIColor colorFromHexString: @"#45B39D  "].CGColor];
+	[self.view.layer insertSublayer:gradient atIndex:0];
+
 	inputView = [[InputView alloc] initWithFrame: CGRectZero];
 	inputView.translatesAutoresizingMaskIntoConstraints = NO;
 
@@ -32,7 +39,7 @@ UIButton *loginButton;
 	[loginButton setTitleColor: UIColor.whiteColor forState: UIControlStateNormal];
 	loginButton.layer.cornerRadius = 10.0;
 	[loginButton setTitle: @"Войти" forState: UIControlStateNormal];
-	loginButton.backgroundColor = [UIColor colorFromHexString: @"#A1887F"];
+	loginButton.backgroundColor = [UIColor colorFromHexString: @"#A569BD"];
 	loginButton.translatesAutoresizingMaskIntoConstraints = NO;
 	[loginButton addTarget: self action: @selector(loginButtonPressed:) forControlEvents: UIControlEventTouchUpInside];
 
@@ -59,8 +66,9 @@ UIButton *loginButton;
 //MARK: Handlers
 - (void)loginButtonPressed: obj {
 	FeedViewController *loginVC = [FeedViewController new];
-	loginVC.modalPresentationStyle = UIModalPresentationFullScreen;
-	[self presentViewController: loginVC animated: YES completion: ^{}];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController: loginVC];
+	navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
+	[self presentViewController: navigationController animated: YES completion: ^{}];
 }
 
 @end

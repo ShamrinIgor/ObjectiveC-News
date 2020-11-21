@@ -8,6 +8,7 @@
 #import "FeedViewController.h"
 #import "FeedTableViewCell.h"
 #import "NetworkService.h"
+#import "UIColor+hex.h"
 
 @implementation FeedViewController
 
@@ -28,6 +29,19 @@ NSMutableArray *feedArcticles;
 	tableView.rowHeight = UITableViewAutomaticDimension;
 
 	feedArcticles = [[NSMutableArray alloc] init];
+
+	self.title = @"News";
+	self.navigationController.navigationBar.prefersLargeTitles = YES;
+	UINavigationBarAppearance *apperance = [UINavigationBarAppearance new];
+	apperance.backgroundColor = [UIColor colorFromHexString: @"#A569BD"];
+	NSDictionary *attrs = @{ NSForegroundColorAttributeName : UIColor.whiteColor };
+	apperance.titleTextAttributes = attrs;
+	apperance.largeTitleTextAttributes = attrs;
+
+	self.navigationController.navigationBar.tintColor = UIColor.whiteColor;
+	self.navigationController.navigationBar.standardAppearance = apperance;
+	self.navigationController.navigationBar.compactAppearance = apperance;
+	self.navigationController.navigationBar.scrollEdgeAppearance = apperance;
 	[self loadArticles];
 	[self.view addSubview: tableView];
 }
@@ -63,6 +77,10 @@ NSMutableArray *feedArcticles;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 	return 1;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	[tableView deselectRowAtIndexPath: indexPath animated: YES];
 }
 
 @end

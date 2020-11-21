@@ -14,9 +14,9 @@ UIView *seporatorLine;
 
 - (instancetype) initWithFrame:(CGRect)frame {
 	self.loginTextField = [UITextField new];
-	self.loginTextField.backgroundColor = UIColor.whiteColor;
+//	self.loginTextField.backgroundColor = UIColor.whiteColor;
 	self.passwordTextField = [UITextField new];
-	self.passwordTextField.backgroundColor = UIColor.whiteColor;
+//	self.passwordTextField.backgroundColor = UIColor.whiteColor;
 	containerView.layer.cornerRadius = 10.0;
 
 	seporatorLine = [[UIView alloc] initWithFrame: CGRectZero];
